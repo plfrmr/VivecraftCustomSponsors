@@ -70,13 +70,16 @@ public class SupporterReceiver {
                     if (!downloadStarted) {
                         downloadStarted = true;
                         String url1 = "https://www.vivecraft.org/patreon/current.txt";
-                        String url2 = "https://raw.githubusercontent.com/plfrmr/VivecraftSupporters/supporters/supporters.txt";
+                        String url2 = "https://raw.githubusercontent.com/Vivecraft/VivecraftSupporters/supporters/supporters.txt";
+                        String url3 = "https://raw.githubusercontent.com/plfrmr/VivecraftSupporters/supporters/supporters.txt";
                         new Thread(() -> {
                             try {
                                 String value1 = IOUtils.toString(new URL(url1), StandardCharsets.UTF_8);
                                 String value2 = IOUtils.toString(new URL(url2), StandardCharsets.UTF_8);
+                                String value3 = IOUtils.toString(new URL(url3), StandardCharsets.UTF_8);
                                 fileDownloadFinished(url1, value1, false);
                                 fileDownloadFinished(url2, value2, true);
+                                fileDownloadFinished(url3, value3, true);
                                 synchronized (lock) {
                                     queuedPlayers.clear();
                                 }

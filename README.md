@@ -1,4 +1,6 @@
-# Vivecraft Mod (of Vivecraft fabric)
+# Don't use this version of Vivecraft
+It can be outdated and it doesn't change much
+## Vivecraft Mod (of Vivecraft fabric)
 A port of [Vivecraft](https://www.vivecraft.org) to Fabric/Quilt and back to Forge.\
 This is an official continuation of the project, using mixin's instead of patches.\
 This means we could use a multiloader setup to develop on Fabric, Forge and Quilt at the same time.\
